@@ -1,13 +1,21 @@
-import { useState } from 'react'
+import Aside from './side'
+import Main_body from './main_body'
 
-import './App.css'
+import './styles/App.css'
 
 function App() {
-  // const [count, setCount] = useState(0)
+
 
   return (
     <>
-
+      <div id='wrapper' className="columns">
+        <div className='column is-one-fifth'>
+          <Aside></Aside>
+        </div>
+        <div className='column is-four-fifth'>
+          <Main_body />
+        </div>
+      </div>
     </>
   )
 }

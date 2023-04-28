@@ -1,0 +1,19 @@
+/* #sidenav-main {
+    position: sticky;
+    top: 0%;
+
+
+    width: 200px;
+} */
+
+.bank_icon {
+    height: 50px;
+    width: 50px;
+}
+
+.sidenav-header,
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
