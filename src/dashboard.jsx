@@ -5,45 +5,50 @@ function Dashboard() {
     return (
         <>
             <main>
-                <div className="columns is-vcentered is-full">
-                    <section className="column  is-half box" id="card">
-                        <div id="card">
-                            <div id="balance"></div>
-                            <div>
-                                <div >
-                                    <div id="card_no"></div>
-                                    <div id="card_expire"></div>
-
+                <section className="box">
+                    <div className="columns is-vcentered is-full">
+                        <section className="column  is-half " id="card">
+                            <div id="card" className="box">
+                                <div id="balance">
+                                    balance
                                 </div>
-                                <div id="card_type"></div>
+                                <div className="is-flex is-flex-direction-row is-justify-content-space-between">
+                                    <div className="is-flex is-flex-direction-column ">
+                                        <div id="card_no">card_no</div>
+                                        <div id="card_expire">card_expire</div>
+                                    </div>
+                                    <div id="card_type" className="is-flex is-align-items-flex-end  ">
+                                        <span>card_type</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                    </section>
-                    <section id="controls" className="box w-100" >
-                        <div className=" columns is-full ">
-                            <div className="column is-half">
-                                <button>Deposit</button>
+                        </section>
+                        <section id="controls" className=" is-flex is-flex-direction-column w-100" >
+                            <div className=" is-flex is-flex-direction-row is-justify-content-space-evenly">
+                                <div className="">
+                                    <button className=" ctrl_btn ">Deposit</button>
+                                </div>
+                                <div className="">
+                                    <button className=" ctrl_btn "> Withdraw</button>
+                                </div>
                             </div>
-                            <div className="column is-half">
-                                <button>Withdraw</button>
+                            <div className="is-flex is-flex-direction-row is-justify-content-space-evenly">
+                                <div className="">
+                                    <button className=" ctrl_btn  ">Transfer</button>
+                                </div>
+                                <div className="">
+                                    <button className=" ctrl_btn  ">Invest</button>
+                                </div>
                             </div>
-                        </div>
-                        <div className=" columns is-full">
-                            <div className="column is-half">
-                                <button>Transfer</button>
-                            </div>
-                            <div className="column is-half">
-                                <button>Invest</button>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <section className="columns is-vcentered is-full box">
-                        summary and stuff
-                    </section>
-                </div>
+                        </section>
+                    </div>
+                    <div>
+                        <section className="columns is-vcentered is-full box">
+                            summary and stuff
+                        </section>
+                    </div>
+                </section>
             </main>
         </>
     )
