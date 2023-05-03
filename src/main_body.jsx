@@ -1,6 +1,8 @@
 
 import Header from "./header"
-import Dashboard from "./dashboard"
+
+
+import { Outlet } from "react-router-dom";
 
 import './styles/main_style.css'
 
@@ -12,7 +14,7 @@ function Main_body() {
 
                 <Header></Header>
                 <hr />
-                <Dashboard></Dashboard>
+                <Outlet></Outlet>
 
             </div>
 

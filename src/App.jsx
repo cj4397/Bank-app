@@ -1,7 +1,9 @@
 import Aside from './side'
-import Main_body from './main_body'
+
 
 import './styles/App.css'
+
+import { Outlet } from "react-router-dom";
 
 function App() {
 
@@ -13,7 +15,7 @@ function App() {
           <Aside></Aside>
         </div>
         <div className='column is-four-fifth'>
-          <Main_body />
+          <Outlet />
         </div>
       </div>
     </>

@@ -1,7 +1,18 @@
+import { Link } from "react-router-dom";
+
 
 import './styles/side_style.css'
 
+
+
+
 function Aside() {
+
+    function sign_out() {
+        console.log('user info must be deleted')
+
+    }
+
     return (
         <>
             <aside className="menu">
@@ -13,31 +24,39 @@ function Aside() {
                 <hr />
 
                 <ul className="menu-list">
-                    <li><a>
-                        <img className='icon' src="/src/assets/png/011-dashboard.png" alt="" />
-                        <span className="nav-link-text ms-1">Dashboard</span></a></li>
+                    <li>
+                        <Link to={`Main/Dashboard`}>
+                            <img className='icon' src="/src/assets/png/011-dashboard.png" alt="" />
+                            <span className="nav-link-text ms-1">Dashboard</span>
+                        </Link>
+                    </li>
 
                 </ul>
 
                 <hr />
 
                 <ul className="menu-list">
-                    <li><a>
-                        <img className='icon' src="/src/assets/png/013-bill.png" alt="" />
-                        <span className="nav-link-text ms-1">Billing</span>
-                    </a></li>
                     <li>
-                        <a>
+                        <Link to={`Main/Billing`}>
+                            <img className='icon' src="/src/assets/png/013-bill.png" alt="" />
+                            <span className="nav-link-text ms-1">Billing</span>
+                        </Link></li>
+                    <li>
+                        <Link to={`Main/Notifications`}>
                             <img className='icon' src="/src/assets/png/014-notification.png" alt="" />
                             <span className="nav-link-text ms-1">Notifications</span>
-                        </a></li>
-                    <li><a>
-                        <img className='icon' src="/src/assets/png/015-user.png" alt="" />
-                        <span className="nav-link-text ms-1">Profile</span></a></li>
-                    <li><a>
-                        <img className='icon' src="/src/assets/png/016-logout.png" alt="" />
-                        <span className="nav-link-text ms-1">Sign Out</span>
-                    </a></li>
+                        </Link></li>
+                    <li>
+                        <Link to={`Main/Profile`}>
+                            <img className='icon' src="/src/assets/png/015-user.png" alt="" />
+                            <span className="nav-link-text ms-1">Profile</span>
+                        </Link></li>
+                    <li>
+                        <Link to={`/`} onClick={sign_out} >
+                            <img className='icon' src="/src/assets/png/016-logout.png" alt="" />
+                            <span className="nav-link-text ms-1">Sign Out</span>
+                        </Link>
+                    </li>
 
                 </ul>
 
